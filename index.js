@@ -9,11 +9,11 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'aniruddh97',
-    database: 'photography'
+    database: 'photography',
 });
 app.use(cors())
 
-app.get('/', (req, res, next) => {
+app.get('/images', (req, res, next) => {
     category = req.query.category;
     // base64Img.base64('/home/devil/Downloads/Saatmiseks/Owl/6.jpg', function (err, data) {
     //     connection.query(`INSERT INTO images (image, category) VALUES ("${data}", "Owl");`, function (err, rows, fields) {
